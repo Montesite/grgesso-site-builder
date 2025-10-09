@@ -72,15 +72,15 @@ const Gallery = () => {
   }, [api]);
 
   return (
-    <section id="galeria" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="galeria" className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
               Nossos projetos
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Conheça alguns dos nossos trabalhos realizados em Iturama e região
             </p>
           </div>
@@ -95,7 +95,7 @@ const Gallery = () => {
           >
             <CarouselContent>
               {galleryImages.map((image, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <Card className="border-none shadow-lg hover:shadow-elegant transition-all duration-300 overflow-hidden group">
                       <CardContent className="p-0">
@@ -109,7 +109,7 @@ const Gallery = () => {
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                           <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300 flex items-center justify-center">
-                            <span className="text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-semibold">
+                            <span className="text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm sm:text-base lg:text-lg font-semibold px-4 text-center">
                               Clique para expandir
                             </span>
                           </div>
@@ -120,19 +120,19 @@ const Gallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4" />
-            <CarouselNext className="right-4" />
+            <CarouselPrevious className="left-2 sm:left-4 h-8 w-8 sm:h-10 sm:w-10" />
+            <CarouselNext className="right-2 sm:right-4 h-8 w-8 sm:h-10 sm:w-10" />
           </Carousel>
         </div>
       </div>
 
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-6xl w-full p-0 bg-transparent border-none">
+        <DialogContent className="max-w-[95vw] sm:max-w-4xl lg:max-w-6xl w-full p-2 sm:p-4 bg-transparent border-none">
           <div className="relative">
             <img
               src={selectedImage || ""}
               alt="Imagem expandida"
-              className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+              className="w-full h-auto max-h-[85vh] sm:max-h-[90vh] object-contain rounded-lg"
             />
           </div>
         </DialogContent>

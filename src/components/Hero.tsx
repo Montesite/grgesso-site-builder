@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -12,35 +11,41 @@ const Hero = () => {
         <div className="absolute inset-0 bg-primary/80"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 animate-fade-in">
             GR Gesso
           </h1>
-          <h2 className="text-xl md:text-2xl text-primary-foreground/90 mb-8 animate-fade-in leading-relaxed">
+          <h2 className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 mb-6 sm:mb-8 animate-fade-in leading-relaxed px-4">
             Empresa líder em inovação e qualidade em Iturama e região, reconhecida pela excelência em soluções para interiores
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-12 max-w-2xl mx-auto animate-fade-in">
+          <p className="text-base sm:text-lg text-primary-foreground/80 mb-8 sm:mb-12 max-w-2xl mx-auto animate-fade-in px-4">
             Desde 2004 transformando espaços com forros, divisórias e acabamentos de alta qualidade
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <Button size="lg" onClick={() => window.open("https://wa.me/5534998378195", "_blank")} className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-gold text-lg px-8 py-6">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in px-4">
+            <button 
+              onClick={() => window.open("https://wa.me/5534998378195", "_blank")} 
+              className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground shadow-gold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-lg font-semibold transition-all duration-300"
+            >
               Solicitar Orçamento
-            </Button>
-            <Button size="lg" variant="outline" onClick={() => {
-            const element = document.getElementById("servicos");
-            if (element) {
-              const headerOffset = 80;
-              const elementPosition = element.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-              });
-            }
-          }} className="border-2 border-primary-foreground/60 text-primary-foreground text-lg px-8 py-6 bg-zinc-950 hover:bg-zinc-800">
+            </button>
+            <button 
+              onClick={() => {
+                const element = document.getElementById("servicos");
+                if (element) {
+                  const headerOffset = 80;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                  });
+                }
+              }} 
+              className="w-full sm:w-auto border-2 border-primary-foreground/60 text-primary-foreground text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-lg bg-zinc-950 hover:bg-zinc-800 font-semibold transition-all duration-300"
+            >
               Nossos Serviços
-            </Button>
+            </button>
           </div>
         </div>
       </div>
