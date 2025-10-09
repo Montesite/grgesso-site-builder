@@ -23,6 +23,16 @@ import midia7 from "@/assets/gallery/midia_7.jpg";
 import midia8 from "@/assets/gallery/midia_8.jpg";
 import midia9 from "@/assets/gallery/midia_9.jpg";
 import midia10 from "@/assets/gallery/midia_10.jpg";
+import midia11 from "@/assets/gallery/midia_11.jpg";
+import midia12 from "@/assets/gallery/midia_12.jpg";
+import midia13 from "@/assets/gallery/midia_13.jpg";
+import midia14 from "@/assets/gallery/midia_14.jpg";
+import midia15 from "@/assets/gallery/midia_15.jpg";
+import midia16 from "@/assets/gallery/midia_16.jpg";
+import midia17 from "@/assets/gallery/midia_17.jpg";
+import midia18 from "@/assets/gallery/midia_18.jpg";
+import midia19 from "@/assets/gallery/midia_19-2.jpg";
+import midia20 from "@/assets/gallery/midia_20.jpg";
 
 const galleryImages = [
   { src: midia1, alt: "Projeto GR Gesso - Ambiente moderno com iluminação embutida" },
@@ -35,6 +45,16 @@ const galleryImages = [
   { src: midia8, alt: "Projeto GR Gesso - Living room com pé-direito duplo" },
   { src: midia9, alt: "Projeto GR Gesso - Fachada residencial elegante" },
   { src: midia10, alt: "Projeto GR Gesso - Sala de estar com molduras decorativas" },
+  { src: midia11, alt: "Projeto GR Gesso - Sala de estar com forro em gesso e iluminação dourada" },
+  { src: midia12, alt: "Projeto GR Gesso - Área de lazer com teto em gesso e iluminação LED" },
+  { src: midia13, alt: "Projeto GR Gesso - Área externa com piscina e acabamento em gesso" },
+  { src: midia14, alt: "Projeto GR Gesso - Espaço gourmet com molduras decorativas" },
+  { src: midia15, alt: "Projeto GR Gesso - Ambiente moderno com iluminação geométrica no teto" },
+  { src: midia16, alt: "Projeto GR Gesso - Hall com forro de gesso e lustre elegante" },
+  { src: midia17, alt: "Projeto GR Gesso - Teto com iluminação embutida em formato geométrico" },
+  { src: midia18, alt: "Projeto GR Gesso - Cozinha e sala integradas com teto moderno" },
+  { src: midia19, alt: "Projeto GR Gesso - Forro com iluminação LED e spots embutidos" },
+  { src: midia20, alt: "Projeto GR Gesso - Quarto com teto em gesso e iluminação moderna" },
 ];
 
 const Gallery = () => {
